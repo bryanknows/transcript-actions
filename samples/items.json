@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "task": "Ship the keyboard shortcut fix behind a feature flag",
+      "owner": "Callum",
+      "due": "before the end of the sprint",
+      "quote": "I'll ship the keyboard shortcut fix behind a flag before the end of the sprint.",
+      "line_start": 20,
+      "line_end": 20
+    },
+    {
+      "task": "Put the empty-state mockups in the shared folder",
+      "owner": "Ingrid",
+      "due": "Friday noon",
+      "quote": "I will have the empty-state mockups in the shared folder by Friday noon.",
+      "line_start": 87,
+      "line_end": 87
+    },
+    {
+      "task": "Write the migration script for the retention table",
+      "owner": "Theo",
+      "due": "this week",
+      "quote": "I'll write the migration script for the retention table this week.",
+      "line_start": 70,
+      "line_end": 70
+    },
+    {
+      "task": "Send the pricing page draft to the whole team",
+      "owner": "Marisol",
+      "due": "Thursday",
+      "quote": "I'll send the pricing page draft to the whole team by Thursday",
+      "line_start": 33,
+      "line_end": 34
+    },
+    {
+      "task": "Open the ticket for the export timeout and self-assign it",
+      "owner": "Desmond",
+      "due": "tonight",
+      "quote": "I'll open the ticket for the export timeout tonight and assign it to myself.",
+      "line_start": 124,
+      "line_end": 124
+    },
+    {
+      "task": "Rewrite the export service before the demo",
+      "owner": "Theo",
+      "due": "before the demo",
+      "quote": "I'll rewrite the export service in Rust before the demo.",
+      "line_start": 44,
+      "line_end": 44
+    },
+    {
+      "task": "Add the comparison table note to the draft comments",
+      "owner": "Ingrid",
+      "due": "",
+      "quote": "Will do.",
+      "line_start": 39,
+      "line_end": 39
+    },
+    {
+      "task": "Email Pembrook the data residency summary",
+      "owner": "Beatrix",
+      "due": "tomorrow morning",
+      "quote": "I'll email Pembrook the data residency summary tomorrow morning.",
+      "line_start": 970,
+      "line_end": 971
+    }
+  ]
+}

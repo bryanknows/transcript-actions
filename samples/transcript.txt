@@ -1,0 +1,140 @@
+Marisol: Morning, everyone. Let's get through the Fennelworks product sync in thirty minutes if we can.
+Desmond: Works for me. I have a deploy window at eleven.
+Theo: Same here. I need to be out by eleven for the runtime work.
+Marisol: Quick housekeeping first. The Tidewrack board moved to the new columns, so if something looks lost, check Blocked.
+Callum: Found mine. Carry on.
+Marisol: First up, the release. Where are we on 2.4?
+Desmond: The export timeout is the only open blocker. Everything else on the board is green.
+Theo: The timeout only shows up on workspaces with more than two million log lines.
+Desmond: Right, and that is three customers, so it matters.
+Marisol: Do we know why it happens?
+Theo: The export walks the index twice. Once to count, once to stream. The count is the slow part.
+Desmond: We can cache the count or just drop it. Either fix is a day of work.
+Marisol: Who owns it?
+Desmond: I'll open the ticket for the export timeout tonight and assign it to myself.
+Marisol: Great. Anything else blocking 2.4?
+Callum: Not blocking, but the keyboard shortcut regression is annoying people in the beta channel.
+Ingrid: Which shortcut?
+Callum: The slash key. It used to focus the search box and now it types a slash into whatever has focus.
+Marisol: Can that go out with 2.4 or does it wait?
+Callum: I'll ship the keyboard shortcut fix behind a flag before the end of the sprint.
+Desmond: Behind a flag is fine. We flip it on once the beta folks confirm.
+Callum: It is a two line change. The flag is more work than the fix.
+Desmond: Still want the flag. We have been burned on focus handling before.
+Ingrid: Can we also get the shortcut list into the help panel? People do not know it exists.
+Callum: That is a bigger change. Not this sprint.
+
+Marisol: Next, pricing. Beatrix, you had notes from the Oakhollow call.
+Beatrix: Oakhollow Logistics said the team tier feels expensive once they cross ten seats.
+Beatrix: They were not threatening to leave, just flagging it.
+Marisol: We have heard that from two other accounts now.
+Desmond: Someone ought to revisit the pricing tiers eventually.
+Marisol: Agreed, but not this quarter. What I can do is get the pricing page copy cleaned up.
+Marisol: I'll send the pricing page draft to the whole team
+Desmond: by Thursday, you said.
+Marisol: By Thursday, yes. It is mostly rewording, not new tiers.
+Beatrix: That helps. The current page buries the seat count under the feature list.
+Ingrid: While we are on that page, the comparison table does not work on narrow screens.
+Marisol: Noted. Add it to the draft comments when it lands.
+Ingrid: Will do.
+
+Marisol: Staging. Theo, where is the runtime upgrade?
+Theo: The new runtime is tested locally. I have not touched staging yet.
+Ingrid: The demo for Pembrook is Wednesday, right?
+Theo: Yes. I'll have the staging cluster on the new runtime before
+Ingrid: Wednesday's demo, and you will post in the channel when it is done?
+Theo: Exactly. I will post in the channel when it is done.
+Desmond: If it goes sideways, roll back and we demo on the old runtime. Nobody will notice.
+Theo: Understood. The rollback is one command.
+Callum: It would be nice to have dark mode for that demo, honestly.
+Ingrid: It would be nice, and it is not happening by Wednesday.
+Callum: Fair.
+Marisol: Who is running the Pembrook demo?
+Beatrix: I am. Desmond is on the call for the technical questions.
+Desmond: I am, assuming the deploy window does not run long.
+Marisol: If it does, Theo covers the technical half.
+Theo: Happy to.
+Beatrix: I will send both of you the Pembrook attendee list so you know who is asking what.
+
+Marisol: Incident from last Friday. Beatrix, you were on point.
+Beatrix: The search index fell behind by about forty minutes for roughly a third of workspaces.
+Beatrix: Nobody lost data, but the dashboard showed stale counts and four customers wrote in.
+Desmond: The root cause was the indexer picking up the retention job's lock.
+Theo: Which is my fault. The retention job should never have shared that lock.
+Desmond: It was a reasonable shortcut two years ago. It just stopped being reasonable.
+Marisol: Do we have a retro written up?
+Beatrix: Not yet. I will write up the incident retro and
+Callum: circulate it by end of day Monday?
+Beatrix: Right, end of day Monday. I want Theo's timeline in it first.
+Theo: You will have the timeline tonight.
+Theo: I'll write the migration script for the retention table this week.
+Theo: That removes the shared lock entirely, so the retro can point at a real fix.
+Desmond: Good. Put the script behind review before it touches production.
+Theo: Of course.
+Marisol: Do the four customers who wrote in need a follow-up?
+Beatrix: They got a reply on Friday. I will fold their tickets into the retro so we have the record.
+Marisol: Good. Let's make sure the retro says what we are changing, not just what broke.
+Beatrix: It will.
+
+Marisol: Design. Ingrid, empty states.
+Ingrid: I have three directions for the empty search state. Two are quiet, one is playful.
+Callum: Playful meaning the little tide pool illustration?
+Ingrid: Yes, that one. I am not sure it fits a log tool.
+Desmond: I like it more than I expected to.
+Beatrix: Customers will screenshot it. That is either good or bad.
+Marisol: Show all three. We should probably look at the onboarding flow at some point too.
+Ingrid: At some point, sure. For now the empty states are the priority.
+Ingrid: I will have the empty-state mockups in the shared folder by Friday noon.
+Callum: Then I can start the layout next week.
+Ingrid: The quiet ones will be faster to build. The illustration needs an export pass.
+Callum: Either way is fine. I just need the spacing decided.
+Marisol: Perfect.
+Desmond: One request. Keep the empty state under a hundred kilobytes. The illustration last time was a megabyte.
+Ingrid: Understood. It will be an SVG this time.
+
+Marisol: Customer follow-ups. Beatrix?
+Beatrix: Pembrook wants a written answer on data residency before the Wednesday demo.
+Beatrix: I'll email Pembrook the data residency summary tomorrow morning.
+Desmond: Use the one from the security page. It has not changed.
+Beatrix: Will do.
+Beatrix: Pembrook also wants the demo recorded. I said yes.
+Beatrix: Oakhollow also asked about the audit log export. I told them it is on the roadmap.
+Marisol: It is on the roadmap. No date, and let's keep it that way for now.
+Desmond: Maybe we can talk about hiring next quarter. The backlog is not shrinking.
+Marisol: Maybe. Let's see what the renewals look like in October.
+Beatrix: Three of the five big renewals are in October, so that is the right time to ask.
+Desmond: Fine. I will stop bringing it up until then.
+Marisol: You will not, but I appreciate the thought.
+
+Marisol: Last thing. The flaky integration test.
+Callum: The one that fails every fourth run on the auth suite?
+Desmond: That one. It has been red on and off for two weeks.
+Theo: I think it is a timing issue with the token refresh. The test assumes the clock never moves.
+Callum: For what it is worth, it only fails on the shared runner, never locally.
+Theo: Which fits the clock theory. The shared runner is slower.
+Callum: I might take a look at the flaky test if I get time, but no promises this sprint.
+Desmond: No promises is fine. I would rather you finish the shortcut fix.
+Theo: If Callum does not get to it, I can look after the migration script is done.
+Marisol: Let's leave it unowned for now and revisit on Thursday.
+Desmond: Agreed. I could stop retrying it in the pipeline so at least it is honest about failing.
+Marisol: Is that a commitment or a thought?
+Desmond: A thought. I have enough on my plate this week.
+Marisol: Then it stays a thought.
+
+Marisol: Recap. Desmond opens the export timeout ticket tonight.
+Marisol: Callum ships the shortcut fix behind a flag before the sprint ends.
+Marisol: I send the pricing page draft Thursday.
+Marisol: Theo gets staging onto the new runtime before Wednesday's demo and posts in the channel.
+Marisol: Beatrix circulates the incident retro by end of day Monday.
+Marisol: Theo writes the retention migration script this week.
+Marisol: Ingrid drops the empty-state mockups in the shared folder by Friday noon.
+Marisol: Beatrix emails Pembrook the data residency summary tomorrow morning.
+Marisol: And Beatrix sends the Pembrook attendee list to Desmond and Theo.
+Desmond: That is a long list for one week.
+Marisol: It is. Anything I missed?
+Beatrix: One small thing. I'll add the four customer tickets from the incident to the retro doc.
+Marisol: Good. Added.
+Callum: Nothing from me.
+Theo: Nothing from me either.
+Ingrid: Same.
+Marisol: Then we are done. Thanks, everyone.

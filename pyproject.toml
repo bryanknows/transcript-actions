@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transcript-actions"
+version = "0.1.0"
+description = "Turn a meeting transcript into action items that each link back to the exact lines they came from. Items the model can't back with a real quote are rejected in code."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Bryan Beato" }]
+dependencies = ["anthropic>=0.125"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+transcript-actions = "transcript_actions.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["transcript_actions*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

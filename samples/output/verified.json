@@ -1,0 +1,54 @@
+[
+  {
+    "chunk_index": 0,
+    "due": "before the end of the sprint",
+    "found_end": null,
+    "found_start": null,
+    "line_end": 20,
+    "line_start": 20,
+    "owner": "Callum",
+    "quote": "I'll ship the keyboard shortcut fix behind a flag before the end of the sprint.",
+    "reason": "",
+    "status": "verified",
+    "task": "Ship the keyboard shortcut fix behind a feature flag"
+  },
+  {
+    "chunk_index": 0,
+    "due": "Friday noon",
+    "found_end": null,
+    "found_start": null,
+    "line_end": 87,
+    "line_start": 87,
+    "owner": "Ingrid",
+    "quote": "I will have the empty-state mockups in the shared folder by Friday noon.",
+    "reason": "",
+    "status": "verified",
+    "task": "Put the empty-state mockups in the shared folder"
+  },
+  {
+    "chunk_index": 0,
+    "due": "this week",
+    "found_end": null,
+    "found_start": null,
+    "line_end": 70,
+    "line_start": 70,
+    "owner": "Theo",
+    "quote": "I'll write the migration script for the retention table this week.",
+    "reason": "",
+    "status": "verified",
+    "task": "Write the migration script for the retention table"
+  },
+  {
+    "chunk_index": 0,
+    "due": "Thursday",
+    "found_end": null,
+    "found_start": null,
+    "line_end": 34,
+    "line_start": 33,
+    "owner": "Marisol",
+    "quote": "I'll send the pricing page draft to the whole team by Thursday",
+    "reason": "",
+    "status": "verified",
+    "task": "Send the pricing page draft to the whole team"
+  }
+]

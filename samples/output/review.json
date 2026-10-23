@@ -1,0 +1,15 @@
+[
+  {
+    "chunk_index": 0,
+    "due": "tonight",
+    "found_end": 14,
+    "found_start": 14,
+    "line_end": 124,
+    "line_start": 124,
+    "owner": "Desmond",
+    "quote": "I'll open the ticket for the export timeout tonight and assign it to myself.",
+    "reason": "quote found at lines 14-14, not 124-124",
+    "status": "review",
+    "task": "Open the ticket for the export timeout and self-assign it"
+  }
+]

@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.env
+.DS_Store
+
+# Default output directory of `transcript-actions run`. The committed sample output lives in
+# samples/output/, which this pattern does not match (the directory is named "output", not
+# "out"); the negation below keeps it that way if the patterns above ever change.
+out/
+!samples/output/

@@ -1,0 +1,41 @@
+[
+  {
+    "chunk_index": 0,
+    "due": "before the demo",
+    "found_end": null,
+    "found_start": null,
+    "line_end": 44,
+    "line_start": 44,
+    "owner": "Theo",
+    "quote": "I'll rewrite the export service in Rust before the demo.",
+    "reason": "quote not found in transcript",
+    "status": "rejected",
+    "task": "Rewrite the export service before the demo"
+  },
+  {
+    "chunk_index": 0,
+    "due": "",
+    "found_end": null,
+    "found_start": null,
+    "line_end": 39,
+    "line_start": 39,
+    "owner": "Ingrid",
+    "quote": "Will do.",
+    "reason": "quote too short to verify",
+    "status": "rejected",
+    "task": "Add the comparison table note to the draft comments"
+  },
+  {
+    "chunk_index": 0,
+    "due": "tomorrow morning",
+    "found_end": null,
+    "found_start": null,
+    "line_end": 971,
+    "line_start": 970,
+    "owner": "Beatrix",
+    "quote": "I'll email Pembrook the data residency summary tomorrow morning.",
+    "reason": "line range out of bounds",
+    "status": "rejected",
+    "task": "Email Pembrook the data residency summary"
+  }
+]
